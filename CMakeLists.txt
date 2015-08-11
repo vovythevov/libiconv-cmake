@@ -1,9 +1,6 @@
 ##
 ## CMake support for libiconv
 ##
-## Special thanks to this tutorial:
-## http://www.codeproject.com/Articles/302012/How-to-Build-libiconv-with-Microsoft-Visual-Studio
-##
 
 cmake_minimum_required(VERSION 3.0.0)
 project(Libiconv)
