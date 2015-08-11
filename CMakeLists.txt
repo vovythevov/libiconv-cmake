@@ -67,6 +67,7 @@ set(${libname}_sources
 
 add_library(${libname} ${${libname}_sources})
 list(APPEND Libiconv_TARGETS ${libname})
+list(APPEND Libiconv_headers ${Libiconv_BINARY_DIR}/localcharset.h)
 
 #
 # Build libiconv
@@ -103,6 +104,7 @@ set(${libname}_sources
 add_library(${libname} ${${libname}_sources})
 target_link_libraries(${libname} libcharset)
 list(APPEND Libiconv_TARGETS ${libname})
+list(APPEND Libiconv_headers ${Libiconv_BINARY_DIR}/iconv.h)
 
 #
 # Export targets
@@ -112,6 +114,8 @@ install(TARGETS ${Libiconv_TARGETS}
   LIBRARY DESTINATION lib
   ARCHIVE DESTINATION lib/static
 )
+
+install(FILES ${Libiconv_headers} DESTINATION include)
 
 set(Libiconv_TARGETS_FILE ${Libiconv_BINARY_DIR}/LibiconvTargets.cmake)
 export(TARGETS ${Libiconv_TARGETS} FILE ${Libiconv_TARGETS_FILE})
