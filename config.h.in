@@ -27,7 +27,7 @@
 #undef DOUBLE_SLASH_IS_DISTINCT_ROOT
 
 /* Define as good substitute value for EILSEQ. */
-#undef EILSEQ
+//#undef EILSEQ
 
 /* Define to 1 to enable a few rarely used encodings. */
 #undef ENABLE_EXTRA
@@ -683,7 +683,7 @@
 #undef HAVE__NSGETEXECUTABLEPATH
 
 /* Define as const if the declaration of iconv() needs const. */
-#undef ICONV_CONST
+#define ICONV_CONST const
 
 /* Define to the value of ${prefix}, as a string. */
 #undef INSTALLPREFIX
