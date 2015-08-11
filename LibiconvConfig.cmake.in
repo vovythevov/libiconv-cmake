@@ -5,6 +5,7 @@
 
 set(Libiconv_SOURCE_DIR "@Libiconv_SOURCE_DIR@")
 set(Libiconv_BINARY_DIR "@Libiconv_BINARY_DIR@")
+set(Libiconv_LIBRARIES "@Libiconv_TARGETS@")
 
 if(EXISTS "@Libiconv_TARGETS_FILE@" AND NOT TARGET libcharset)
   include("@Libiconv_TARGETS_FILE@")
