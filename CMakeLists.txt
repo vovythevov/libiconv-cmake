@@ -112,7 +112,7 @@ list(APPEND Libiconv_headers ${Libiconv_BINARY_DIR}/iconv.h)
 install(TARGETS ${Libiconv_TARGETS}
   RUNTIME DESTINATION bin
   LIBRARY DESTINATION lib
-  ARCHIVE DESTINATION lib/static
+  ARCHIVE DESTINATION lib
 )
 
 install(FILES ${Libiconv_headers} DESTINATION include)
